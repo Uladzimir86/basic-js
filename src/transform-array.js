@@ -2,7 +2,7 @@ const CustomError = require("../extensions/custom-error");
 
 module.exports = function transform(ar) {
 
-  console.log(ar);
+  
  
   //let arr = [];
   //Object.assign(arr, ar);
