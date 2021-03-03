@@ -28,7 +28,7 @@ module.exports = class DepthCalculator {
 }
   calc (arr, 1);
   depth = 1;
-  console.log('resarr'+resArr);
+  //console.log('resarr'+resArr);
     resArr.forEach(item => {if(depth < item) depth = item} ) 
 
    return depth;
