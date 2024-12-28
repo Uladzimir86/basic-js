@@ -43,15 +43,17 @@ const deeperFakeDate = {
 };
 
 Object.setPrototypeOf(deeperFakeDate, Object.getPrototypeOf(new Date()));
+console.log('d ', getSeason(new Date()));
 console.log('deeperFakeDate: ', getSeason(deeperFakeDate));
 
 function getSeason(date) {
-  console.log('date: ', typeof date);
+  console.log('date: ', date[Symbol.toStringTag], date.hasOwnProperty('getDay'));
   if (!date) return 'Unable to determine the time of year!'; 
   try {
     if (!(date.constructor === Date)) throw new Error(); 
+    if (date[Symbol.toStringTag]) throw new Error(); 
     const month = date.getMonth();
-    const time = date.getTime();
+    // const time = date.getTime();
     // console.log('time: ', time);
 
     switch (month) {
