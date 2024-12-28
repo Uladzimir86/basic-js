@@ -17,7 +17,6 @@ function getSeason(date) {
   try {
     if (!(date.constructor === Date)) throw new Error(); 
     const month = date.getMonth();
-    const d = date.now();
 
     switch (month) {
       case 0 : 
